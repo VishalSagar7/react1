@@ -1,0 +1,19 @@
+#firstDiv{
+    height: 100px;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#secondDiv{
+    height: 100px;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+#thirdDiv{
+    height: 100px;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}

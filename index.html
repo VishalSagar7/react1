@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Create Element Example</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    
+    const heading = React.createElement('h1', null, 'Main Heading of the Web Page');
+
+    
+    const firstDiv = React.createElement(
+      'div', 
+      {id : 'firstDiv'}, 
+      React.createElement('p', null, 'This is a sample paragraph within the first div. The content here should be clear, concise, and formatted in a way that enhances readability.')
+    );
+
+  
+    const secondDiv = React.createElement(
+      'div', 
+      {id : 'secondDiv'},
+      React.createElement('p', null, 
+        'For more information, you can visit ', 
+        React.createElement('a', { href: 'https://www.example.com', target: '_blank' }, 'this page'), 
+        ' to learn more.'
+      )
+    );
+
+    
+    const lastDiv = React.createElement(
+      'div', 
+      {id : 'thirdDiv'},
+      React.createElement('p', null, 'This is the final div with a paragraph. The content here should be relevant to the purpose of the page, providing closure or additional details for the reader.')
+    );
+
+    
+    const rootElement = document.getElementById('root');
+    const root = ReactDOM.createRoot(rootElement);
+
+   
+    root.render(React.createElement(React.Fragment, null, heading, firstDiv, secondDiv, lastDiv));
+  </script>
+
+
+</body>
+</html>
